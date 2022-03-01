@@ -1,0 +1,65 @@
+.sidebar {
+    padding-left: 56px;
+    padding-top: 50px;
+    padding-right: 15px;
+    padding-bottom: 60px;
+    width: 252px;
+    height: 100vh; /* полная высота*/
+    background-color: rgb(201, 201, 201);
+    /*делаем флекс-бокс для HELP (надо снести help вниз)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /*ставим по левой стороне*/
+}
+
+.sidebar-logo {
+    margin-bottom: 57px;
+}
+
+.sidebar-help {
+    margin-top: auto;
+}
+
+    /*NAVIGATION*/
+
+.nav
+
+.nav-title {
+    font-family: 700;
+    font-size: 30px;
+    margin-bottom: 44px;
+}
+
+.nav-list li {
+    margin-bottom: 27px;
+    font-size: 15.71px;
+}
+
+.nav-list a {
+    transition: color 0.2s ease-in;  /*ставим плавную анимацию на смену цвета*/
+}
+
+.nav-list a:hover {  /*делаем анимация при наведение (hover)*/
+    color: #FD2E24
+}
+
+.nav-list img {  /*выравнивание иконок в строчку*/
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    /*выравниваем иконки с текстом (равный отступ для всех)*/
+    width: 26px;  /* делаем все картинки 26px в ширину */
+    height: auto; /* высота автомат */
+    object-fit: none; /* картинка не меняет разрешение */
+}
+
+.help {
+    font-size: 15.7px;
+}
+
+.help-icon {
+    display: inline-block; /*выравниваем элементы в строку*/
+    vertical-align: middle; /*выравниваем по центру*/
+    margin-right: 16px;
+}
