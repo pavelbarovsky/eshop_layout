@@ -65,14 +65,133 @@
             </nav>
 
             <div class="sidebar-help">
-                
+                <a href="#" class="help">
+                    <img class="help-icon" src="./img/help.svg" alt="help">
+                    Help Center
+                </a>
             </div>
-
-            <a class="help">
-                <img class="help-icon" src="./img/help.svg" alt="help">
-                Help Center
-            </a>
         </div>
+
+        <main class="main">
+            <header class="header">
+                <!-- header search-->
+                <div class="header-search">
+                    <form class="search">
+                        <label class="search-label">
+                            <img class="search-icon" src="./img/search.svg" alt="seatch">
+                            <input class="search-input" type="text" placeholder="Search store">
+                        </label>
+                    </form>
+                </div>
+                <!-- header links-->
+                <div class="header-links">
+                    <nav class="nav-header">
+                        <ul class="nav-header-list">
+                            <li class="nav-header-link-text active"><a href="#">products</a></li>
+                            <li class="nav-header-link-text"><a href="#">story</a></li>
+                            <li class="nav-header-link-text"><a href="#">manufacturing</a></li>
+                            <li class="nav-header-link-text"><a href="#">packaging</a></li>
+                            <li class="nav-header-link-icon"> 
+                                <a href="#"><img src="./img/basket.svg" alt="ico"></a>
+                            </li>
+                            <li class="nav-header-link-icon"> 
+                                <a href="#"><img src="./img/person.svg" alt="ico"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+            </header>
+
+            <div class="cards-wrapper">
+                <div class="cards-wrapper-row">
+
+                    <div class="cards-wrapper-col col-vertical">
+                        
+                        <a href="#" class="card card-horizontal card-sale" style="background-image: url('./../img/cards/1.svg');">
+                            <span>GET UP TO 50% OFF</span>
+                        </a>
+                        <a href="#" class="card card-horizontal card-sale" style="background-image: url('./../img/cards/2.svg');">
+                        </a>
+
+                    </div>
+
+                    <div class="cards-wrapper-col col-horizontal">
+
+                        <div  class="card card-vertical card-product">
+                            <button class="card-product-fav-btn">
+                                <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.42979 1.64279L8.42956 1.64302L7.8529 2.23725L7.49408 2.60699L7.13526 2.23725L6.5586 1.64302L6.55802 
+                                    1.64243C5.25028 0.290396 3.15986 0.101071 1.77965 1.27714C0.164136 2.65613 0.0772588 5.13809 1.52457 6.63458L8.42979 
+                                    1.64279ZM8.42979 1.64279C9.74072 0.290153 11.8283 0.101252 13.2084 1.27702C14.824 2.656 14.9109 5.138 13.4608 6.63448L13.4607 
+                                    6.63458L7.79656 12.4831C7.62711 12.658 7.35812 12.658 7.18868 12.4831L1.52478 6.6348L8.42979 1.64279Z"/>
+                                </svg>
+                            </button>
+                            <a class="card-product-link" href="#">
+                                <img class="card-product-img" src="./img/cards/3.png" alt="product">
+                            </a>
+                        </div>
+
+                        <div  class="card card-vertical card-product">
+                            <button class="card-product-fav-btn">
+                                <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.42979 1.64279L8.42956 1.64302L7.8529 2.23725L7.49408 2.60699L7.13526 2.23725L6.5586 1.64302L6.55802 
+                                    1.64243C5.25028 0.290396 3.15986 0.101071 1.77965 1.27714C0.164136 2.65613 0.0772588 5.13809 1.52457 6.63458L8.42979 
+                                    1.64279ZM8.42979 1.64279C9.74072 0.290153 11.8283 0.101252 13.2084 1.27702C14.824 2.656 14.9109 5.138 13.4608 6.63448L13.4607 
+                                    6.63458L7.79656 12.4831C7.62711 12.658 7.35812 12.658 7.18868 12.4831L1.52478 6.6348L8.42979 1.64279Z"/>
+                                </svg>
+                            </button>
+                            <a class="card-product-link" href="#">
+                                <img class="card-product-img" src="./img/cards/4.png" alt="product">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cards-wrapper-row">
+                    <div class="cards-wrapper-col col-horizontal">
+
+                        <div  class="card card-vertical card-product">
+                            <button class="card-product-fav-btn">
+                                <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.42979 1.64279L8.42956 1.64302L7.8529 2.23725L7.49408 2.60699L7.13526 2.23725L6.5586 1.64302L6.55802 
+                                    1.64243C5.25028 0.290396 3.15986 0.101071 1.77965 1.27714C0.164136 2.65613 0.0772588 5.13809 1.52457 6.63458L8.42979 
+                                    1.64279ZM8.42979 1.64279C9.74072 0.290153 11.8283 0.101252 13.2084 1.27702C14.824 2.656 14.9109 5.138 13.4608 6.63448L13.4607 
+                                    6.63458L7.79656 12.4831C7.62711 12.658 7.35812 12.658 7.18868 12.4831L1.52478 6.6348L8.42979 1.64279Z"/>
+                                </svg>
+                            </button>
+                            <a class="card-product-link" href="#">
+                                <img class="card-product-img" src="./img/cards/5.png" alt="product">
+                            </a>
+                        </div>
+
+                        <div  class="card card-vertical card-product">
+                            <button class="card-product-fav-btn">
+                                <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.42979 1.64279L8.42956 1.64302L7.8529 2.23725L7.49408 2.60699L7.13526 2.23725L6.5586 1.64302L6.55802 
+                                    1.64243C5.25028 0.290396 3.15986 0.101071 1.77965 1.27714C0.164136 2.65613 0.0772588 5.13809 1.52457 6.63458L8.42979 
+                                    1.64279ZM8.42979 1.64279C9.74072 0.290153 11.8283 0.101252 13.2084 1.27702C14.824 2.656 14.9109 5.138 13.4608 6.63448L13.4607 
+                                    6.63458L7.79656 12.4831C7.62711 12.658 7.35812 12.658 7.18868 12.4831L1.52478 6.6348L8.42979 1.64279Z"/>
+                                </svg>
+                            </button>
+                            <a class="card-product-link" href="#">
+                                <img class="card-product-img" src="./img/cards/6.png" alt="product">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="cards-wrapper-col col-vertical">
+                        <a href="#" class="card card-horizontal card-sale" style="background-image: url('./../img/cards/7.png');"></a>
+                        <a href="#" class="card card-horizontal card-sale" style="background-image: url('./../img/cards/8.png');"></a>    
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
 
 	</body>
 </html>

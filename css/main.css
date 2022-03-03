@@ -4,8 +4,7 @@
     padding-right: 15px;
     padding-bottom: 60px;
     width: 252px;
-    height: 100vh; /* полная высота*/
-    background-color: rgb(201, 201, 201);
+    min-height: 100vh; /* полная высота*/
     /*делаем флекс-бокс для HELP (надо снести help вниз)*/
     display: flex;
     flex-direction: column;
@@ -41,7 +40,7 @@
 }
 
 .nav-list a:hover {  /*делаем анимация при наведение (hover)*/
-    color: #FD2E24
+    color: #72713b
 }
 
 .nav-list img {  /*выравнивание иконок в строчку*/
@@ -62,4 +61,219 @@
     display: inline-block; /*выравниваем элементы в строку*/
     vertical-align: middle; /*выравниваем по центру*/
     margin-right: 16px;
+}
+
+.sidebar-help a {
+    transition: color 0.2s ease-in;  /*ставим плавную анимацию на смену цвета*/
+}
+
+.sidebar-help a:hover {  /*делаем анимация при наведение (hover)*/
+    color: #72713b
+}
+
+
+
+/* MAIN*/
+
+.main {
+    padding-top: 46px;
+    width: 1100px;
+}
+
+ /* HEADER*/
+
+.header {  /*свдвигаем навигацию хедера в строку*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;  /*для адаптивности (ниче не меняет на пк)*/
+    margin-bottom: 70px;  /*для центрального контента отступ вниз*/
+}
+
+/* search */
+
+.search {
+    width: 490px;
+    height: 44px;
+}
+
+.search-label {  /*строка поиска*/
+    height: 100%;
+    display: flex;
+}
+
+.search-input {
+    padding: 0 17px; /*отступ для строки поиска*/
+    flex-grow: 1;
+
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Circular Std';
+}
+
+.search-input::placeholder {
+    color: rgba(0,0,0,0.2);  /*делаем текст прозрачным*/
+}
+
+
+/* header navigation*/
+
+.nav-header {
+    font-size: 17px;
+    font-family: 'Circular Std';
+}
+
+.nav-header-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header-link-text + .nav-header-link-text { /* (+ это сосед справа) определяет как - у текста, у которого есть текст справа*/
+    margin-left: 42px;
+}
+
+.nav-header-link-text + .nav-header-link-icon { /* (+ это сосед справа) определяет как - у текста, у которого есть иконка справа*/
+    margin-left: 50px;
+}
+
+.nav-header-link-icon + .nav-header-link-icon { /* (+ это сосед справа) определяет как - у иконки, у которой есть иконка справа*/
+    margin-left: 25px;
+}
+
+.nav-header-link-text {
+    position: relative; /*делаем родителем для ховера*/
+}
+
+.nav-header-link-text::after {  /*пункт навигации не активный*/
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: -9px;
+    
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: black;
+
+    transition: width 0.2s ease-in;  /*плавная анимация при наведение*/
+}
+
+.nav-header-link-text:hover::after { /*поведение при наведение*/
+    width: 100%;
+}
+
+
+.nav-header-link-text.active::after { /*подчеркивание активной страницы в хедере*/
+    /*рисуем псевдоээлемени (after) - подчеркивание*/
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -9px;
+    
+    content: "";
+    display: block;
+    width: 72px;
+    height: 2px;
+    background-color: black;
+}
+
+
+/* cards wrapper */
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.cards-wrapper-row {
+    display: flex;
+    column-gap: 20px;
+}
+
+.cards-wrapper-col {
+
+}
+
+.col-horizontal {
+    display: flex;
+    column-gap: 20px;
+}
+
+
+.col-vertical {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* card*/
+
+.card {
+    border-radius: 15px;  /*скругление кравев*/
+    overflow: hidden; /*контент не выходит за картинку*/
+}
+
+.card-horizontal {  /*размеры горизонтальных карточек*/
+    width: 539px;
+    height: 180px;
+}
+
+.card-sale {
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.card-vertical {
+    width: 259px;
+    height: 380px;
+}
+
+.card-product {
+    position: relative;
+}
+
+.card-product-link {
+    width: 100%;
+    height: 100%;
+}
+
+.card-product-fav-btn {  /*кнопка "ЛАЙК"*/
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    
+    border-radius: 50%; /*делаем круг вокуруг сердечка*/
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    text-align: center;
+}
+
+.card-product-fav-btn svg {
+    display: inline-block;
+    vertical-align: middle;
+
+    stroke: black;
+    fill: white;
+
+    transition: all 0.2s ease-in;
+}
+
+.card-product-fav-btn:hover svg {  /*изменение ЛАЙКа при наведение*/
+    stroke: #FD2E24;
+    fill: #FD2E24;
+}
+
+.card-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*изображение будет тянуться с сохранением масштаба*/
 }
